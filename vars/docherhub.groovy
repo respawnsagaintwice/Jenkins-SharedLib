@@ -7,3 +7,4 @@ def call(String cred , String username, String image_name , String tag){
   }
   echo 'pushed to dockerhub'
 }
+//
