@@ -1,5 +1,5 @@
 def call() {
     echo 'deploying'
-    sh 'docker rm -f db_cont django_cont || true'
+    sh 'docker ps -a --filter "name=cont" -q | xargs -r docker rm -f'
     sh 'docker compose up -d'
 }   
