@@ -1,4 +1,6 @@
-def call(){
-  echo 'depoying'
-  sh 'docker compose down && docker compose up -d'
-}
+def call() {
+    echo 'deploying'
+    sh 'docker compose down --remove-orphans'
+    sh 'docker compose up -d'
+    echo 'deployed'
+}   
